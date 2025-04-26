@@ -87,17 +87,17 @@ const drugs = [
 
 // 1. Get all drugs that are antibiotics.
 
-// const cat = drugs.filter(each => {
-//     return each.category === "Antibiotic"
-// })
-// // console.log(cat)
+const cat = drugs.filter(each => {
+    return each.category === "Antibiotic"
+ })
+ console.log(cat)
 
 
 // 2. Return an array of drug names in lowercase.
 
-// drugs.forEach((each) => {
-//     console.log(each.name.toLowerCase())
-// })
+ drugs.forEach((each) => {
+     console.log(each.name.toLowerCase())
+ })
 
 // 3. Write a function that accepts a category and returns all drugs under that category.
 
@@ -105,7 +105,7 @@ const func = (categories) =>{
      const filterDrug = drugs.filter(each =>{
       return  each.category === categories});
         
-        // console.log(filterDrug)
+         console.log(filterDrug)
 }
 func("Analgesic")
 
@@ -117,14 +117,14 @@ const filterNameAndManufacturer = drugs.map(each => {
         manufacturer: each.manufacturer
     }
 })
-// console.log(filterNameAndManufacturer)
+ console.log(filterNameAndManufacturer)
 
 // 5. Return all drugs that require a prescription.
 
 const isPrescripted = drugs.filter(each =>{
     return each.isPrescriptionOnly === true
 })
-// console.log(isPrescripted)
+ console.log(isPrescripted)
 
 
 
@@ -133,7 +133,7 @@ const isPrescripted = drugs.filter(each =>{
 const drugAndManufacturer = drugs.map(each =>{
     return [`${each.name} - ${each.dosageMg}mg`]
 })
-// console.log(drugAndManufacturer)
+ console.log(drugAndManufacturer)
 
 // 7. Write a function that returns all drugs with a stock less than 50.
 
@@ -141,7 +141,7 @@ const stockFxn = () =>{
     const drugStock = drugs.filter(each =>{
         return each.stock <  50
     })
-   // console.log(drugStock)
+    console.log(drugStock)
 }
 stockFxn()
 
@@ -150,7 +150,7 @@ stockFxn()
 const isNotPrescripted = drugs.filter(each =>{
     return each.isPrescriptionOnly === false
 })
-// console.log(isNotPrescripted)
+ console.log(isNotPrescripted)
 
 // 9. Write a function that takes a manufacturer name and returns how many drugs are from that company.
 
@@ -158,21 +158,14 @@ const manufacturerName = (name) => {
     const manufacturer = drugs.filter(each =>{
         return each.manufacturer === name
     })
-    // console.log(manufacturer)
+    console.log(manufacturer)
 }
 manufacturerName("Pfizer")
 
 // 10. Use forEach() to count how many drugs are Analgesics.
-
+const counter = 0
 drugs.forEach(each =>{
-    // if(each.category === "Analgesics"){
-    //     console.log(each.category.length)
-    // }
-    if(each.category === "Analgesic"){
-    console.log(each.category.length)}
-})
-
-// const countDrugs = drugs.filter(each =>{
-//     return each.category === "Analgesic"
-// })
-// console.log(countDrugs.length)
+     if(each.category === "Analgesics"){
+        counter++
+     }})
+    console.log(counter)
